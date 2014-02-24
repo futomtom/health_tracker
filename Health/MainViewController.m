@@ -64,11 +64,10 @@
     NSDateFormatter *myDateFormatter = [[NSDateFormatter alloc] init];
     myDateFormatter.dateFormat = @"EEEE";
     NSString *date = [myDateFormatter stringFromDate:weekDay];
-    self.navigationItem.title = date;
-    //self.title=@"hello";
-   
+  //  self.navigationItem.title = date;
+      self.navigationItem.title =_currentUser.name;
+    
 
-   // self.navigationItem.title = @"hello";
     [self initTopDay];
     
     
@@ -157,6 +156,7 @@
     NSDateFormatter *myDateFormatter = [[NSDateFormatter alloc] init];
     myDateFormatter.dateFormat = @"d";
     NSString *date = [myDateFormatter stringFromDate:weekDay];
+   
     
     UILabel *dayLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 80)];
     dayLabel.center = CGPointMake(160, 105);
@@ -346,7 +346,8 @@
     myDateFormatter.dateFormat = @"d";
     NSString *newDay = [myDateFormatter stringFromDate:date];
     myDateFormatter.dateFormat = @"EEEE";
-    NSString *dayName = [myDateFormatter stringFromDate:date];
+ //   NSString *dayName = [myDateFormatter stringFromDate:date];
+     NSString *dayName=_currentUser.name;
     self.dayLabel.text = newDay;
     myDateFormatter.dateFormat = @"MMMM";
     NSString *month = [myDateFormatter stringFromDate:date];
@@ -529,7 +530,7 @@
     
     
     UILabel * lineChartLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 90, SCREEN_WIDTH, 30)];
-    lineChartLabel.text = @"Line Chart";
+    lineChartLabel.text = @"Exercise Statistics Chart";
     lineChartLabel.textColor = PNFreshGreen;
     lineChartLabel.font = [UIFont fontWithName:@"Avenir-Medium" size:23.0];
     lineChartLabel.textAlignment = NSTextAlignmentCenter;
@@ -603,7 +604,7 @@
     //Add BarChart
     
     UILabel * barChartLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 90, SCREEN_WIDTH, 30)];
-    barChartLabel.text = @"Bar Chart";
+    barChartLabel.text = @"Exercise Statistics Chart";
     barChartLabel.textColor = PNFreshGreen;
     barChartLabel.font = [UIFont fontWithName:@"Avenir-Medium" size:23.0];
     barChartLabel.textAlignment = NSTextAlignmentCenter;

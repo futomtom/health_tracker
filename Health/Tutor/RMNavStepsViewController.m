@@ -36,18 +36,46 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
     self.stepsBar.hideCancelButton = YES;
 }
 
 #pragma mark - Actions
 - (void)finishedAllSteps {
+   
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    _thenewUser.name =   [prefs objectForKey:@"name"];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"MM/dd/YYYY"];
+    NSLog(@"%@",[prefs objectForKey:@"birth"]);
+    NSDate *date = [dateFormatter dateFromString:[prefs objectForKey:@"birth"]];
+    NSLog(@"%@", date);
+    
+    
+    _thenewUser.birth =   date;
+    _thenewUser.feet =   [prefs objectForKey:@"feet"];
+    _thenewUser.inch =   [prefs objectForKey:@"inch"];
+    _thenewUser.weight =   [prefs objectForKey:@"weight"];
+    _thenewUser.image =   [prefs objectForKey:@"imagePath"];
+    
+    [self.delegate AddRMNavStepsViewControllerDidSave:_thenewUser];
     [self.navigationController popViewControllerAnimated:YES];
-     [self performSegueWithIdentifier:@"gotomain2" sender:nil];
+  //   [self performSegueWithIdentifier:@"gotomain2" sender:nil];
     
 }
 
 - (void)canceled {
+    [self.delegate AddRMNavStepsViewControllerDidCancel:_thenewUser];
     [self.navigationController popViewControllerAnimated:YES];
+ 
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([[segue identifier] isEqualToString:@"adduser"]){
+      [self.delegate AddRMNavStepsViewControllerDidCancel:_thenewUser];        
+    }
+   }
 
 @end

@@ -154,17 +154,21 @@
         UIDatePicker *datePicker = [[UIDatePicker alloc] init];
         datePicker.datePickerMode = UIDatePickerModeDate;
         [datePicker addTarget:self action:@selector(datePickerValueChanged:) forControlEvents:UIControlEventValueChanged];
+        datePicker.maximumDate = [NSDate date];
+        datePicker.minimumDate=[NSDate dateWithTimeIntervalSince1970:86400*365*70];
+        [datePicker setDate:[NSDate dateWithTimeIntervalSince1970:0]];
         
         if (![textField.text isEqualToString:@""]){
             NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
             if (self.dateFormat) {
                 [dateFormatter setDateFormat:self.dateFormat];
             } else {
-                [dateFormatter setDateFormat:@"MM/dd/YY"];
+                [dateFormatter setDateFormat:@"MM/dd/YYYY"];
             }
             [dateFormatter setTimeZone:[NSTimeZone localTimeZone]];
             [dateFormatter setDateStyle:NSDateFormatterShortStyle];
             [datePicker setDate:[dateFormatter dateFromString:textField.text]];
+            NSLog(@"%@",textField.text);
         }
         [textField setInputView:datePicker];
     }
@@ -310,7 +314,7 @@
         if (self.dateFormat) {
             [dateFormatter setDateFormat:self.dateFormat];
         } else {
-            [dateFormatter setDateFormat:@"MM/dd/YY"];
+            [dateFormatter setDateFormat:@"MM/dd/YYYY"];
         }
         
         [textField setText:[dateFormatter stringFromDate:[NSDate date]]];

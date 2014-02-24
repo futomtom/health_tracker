@@ -28,6 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _imagePath=@"";
     [_portraitImageView.layer setCornerRadius:(_portraitImageView.frame.size.height/2)];
     [_portraitImageView.layer setMasksToBounds:YES];
     [_portraitImageView setContentMode:UIViewContentModeScaleAspectFill];
@@ -47,16 +48,18 @@
 - (IBAction)editPortrait:(id)sender {
     UIActionSheet *choiceSheet = [[UIActionSheet alloc] initWithTitle:nil
                                                              delegate:self
-                                                    cancelButtonTitle:@"取消"
+                                                    cancelButtonTitle:@"Cncel"
                                                destructiveButtonTitle:nil
-                                                    otherButtonTitles:@"拍照", @"从相册中选取", nil];
+                                                    otherButtonTitles:@"Take Photo", @"Album", nil];
     [choiceSheet showInView:self.view];
 }
 
 
 
 - (IBAction)nextStepTapped:(id)sender {
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"autologin"];
+    
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setObject:_imagePath forKey:@"imagePath"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
      
@@ -89,10 +92,21 @@
 #pragma mark VPImageCropperDelegate
 - (void)imageCropper:(VPImageCropperViewController *)cropperViewController didFinished:(UIImage *)editedImage {
     self.portraitImageView.image = editedImage;
+    [self saveImage:editedImage];
     [cropperViewController dismissViewControllerAnimated:YES completion:^{
         // TO DO
     }];
 }
+
+-(void)saveImage:(UIImage*)image{
+    
+    NSString  *append=[NSString stringWithFormat:@"Documents/person%d.png",arc4random()%1000];
+    _imagePath = [NSHomeDirectory() stringByAppendingPathComponent:append];
+    
+    [UIImagePNGRepresentation(image) writeToFile:_imagePath atomically:YES];
+    
+}
+
 
 - (void)imageCropperDidCancel:(VPImageCropperViewController *)cropperViewController {
     [cropperViewController dismissViewControllerAnimated:YES completion:^{

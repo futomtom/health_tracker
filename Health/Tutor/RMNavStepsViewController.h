@@ -25,7 +25,16 @@
 //
 
 #import "RMModalStepsController.h"
+#import "Person.h"
+
+@protocol RMNavStepsViewControllerDelegate
+-(void)AddRMNavStepsViewControllerDidSave:(Person*)User;
+-(void)AddRMNavStepsViewControllerDidCancel:(Person*)User;
+@end
 
 @interface RMNavStepsViewController : RMModalStepsController
+
+@property (weak, nonatomic) id <RMNavStepsViewControllerDelegate> delegate;
+@property (strong, nonatomic) Person *thenewUser;
 
 @end

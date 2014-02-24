@@ -13,12 +13,15 @@
 
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <MobileCoreServices/MobileCoreServices.h>
+#import "Person.h"
 
 
 @interface SetupPage2VC : UIViewController<VPImageCropperDelegate, UIImagePickerControllerDelegate, UIActionSheetDelegate>
 
+@property (strong, nonatomic) Person *thenewUser;
 @property (strong, nonatomic) IBOutlet CTCheckbox *MaleCheckBox;
 @property (strong, nonatomic) IBOutlet CTCheckbox *FemaleCheckBox;
+@property (strong, nonatomic) NSString  *imagePath;
 
 @property (strong, nonatomic) IBOutlet UIImageView *portraitImageView;
 - (IBAction)editPortrait:(id)sender;

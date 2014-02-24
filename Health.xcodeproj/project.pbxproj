@@ -82,7 +82,12 @@
 		FA1BCD7318B3DF9500B7B7F3 /* CTCheckbox.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1BCD7218B3DF9500B7B7F3 /* CTCheckbox.m */; };
 		FA1BCD7518B42CB600B7B7F3 /* defaultHeadBig@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1BCD7418B42CB600B7B7F3 /* defaultHeadBig@2x.png */; };
 		FA1BCD7718B42CBC00B7B7F3 /* defaultHeadSmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1BCD7618B42CBC00B7B7F3 /* defaultHeadSmall@2x.png */; };
+		FA56880118B620770032FA33 /* account.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA5687FF18B620770032FA33 /* account.xcdatamodeld */; };
+		FA56880D18B62BE20032FA33 /* GiftCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA56880C18B62BE20032FA33 /* GiftCardCell.m */; };
 		FA6073F318B445330044F3A4 /* VPImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6073F218B445330044F3A4 /* VPImageCropperViewController.m */; };
+		FA7F7A3B18B674FD0062B76A /* 711.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7F7A3A18B674FD0062B76A /* 711.png */; };
+		FA7F7A4118B68DC30062B76A /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7F7A4018B68DC30062B76A /* Person.m */; };
+		FA7F7A4318B6B1330062B76A /* meal_tutorial_dimmer_gallery-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7F7A4218B6B1330062B76A /* meal_tutorial_dimmer_gallery-568h@2x.png */; };
 		FA8B1C4F18B2BB5E00EC3DF7 /* SetupPage1VC.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8B1C4E18B2BB5E00EC3DF7 /* SetupPage1VC.m */; };
 		FA911DDE18B1728C0090268C /* Forcebit.png in Resources */ = {isa = PBXBuildFile; fileRef = FA911DDD18B1728C0090268C /* Forcebit.png */; };
 		FA911DE018B1752B0090268C /* heart-beat-chart.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA911DDF18B1752B0090268C /* heart-beat-chart.jpg */; };
@@ -90,6 +95,7 @@
 		FA911DE618B1773E0090268C /* bg2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA911DE218B1773E0090268C /* bg2@2x.png */; };
 		FA911DE718B1773E0090268C /* bg3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA911DE318B1773E0090268C /* bg3@2x.png */; };
 		FA911DE818B1773E0090268C /* bg4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA911DE418B1773E0090268C /* bg4@2x.png */; };
+		FAC9C89A18B53CE300652A3B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC9C89918B53CE300652A3B /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -226,8 +232,15 @@
 		FA1BCD7218B3DF9500B7B7F3 /* CTCheckbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCheckbox.m; sourceTree = "<group>"; };
 		FA1BCD7418B42CB600B7B7F3 /* defaultHeadBig@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "defaultHeadBig@2x.png"; sourceTree = "<group>"; };
 		FA1BCD7618B42CBC00B7B7F3 /* defaultHeadSmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "defaultHeadSmall@2x.png"; sourceTree = "<group>"; };
+		FA56880018B620770032FA33 /* account.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = account.xcdatamodel; sourceTree = "<group>"; };
+		FA56880B18B62BE20032FA33 /* GiftCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCardCell.h; sourceTree = "<group>"; };
+		FA56880C18B62BE20032FA33 /* GiftCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftCardCell.m; sourceTree = "<group>"; };
 		FA6073F118B445330044F3A4 /* VPImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPImageCropperViewController.h; sourceTree = "<group>"; };
 		FA6073F218B445330044F3A4 /* VPImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPImageCropperViewController.m; sourceTree = "<group>"; };
+		FA7F7A3A18B674FD0062B76A /* 711.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 711.png; sourceTree = "<group>"; };
+		FA7F7A3F18B68DC30062B76A /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		FA7F7A4018B68DC30062B76A /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		FA7F7A4218B6B1330062B76A /* meal_tutorial_dimmer_gallery-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "meal_tutorial_dimmer_gallery-568h@2x.png"; sourceTree = "<group>"; };
 		FA8B1C4D18B2BB5E00EC3DF7 /* SetupPage1VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetupPage1VC.h; path = ../SetupPage1VC.h; sourceTree = "<group>"; };
 		FA8B1C4E18B2BB5E00EC3DF7 /* SetupPage1VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetupPage1VC.m; path = ../SetupPage1VC.m; sourceTree = "<group>"; };
 		FA911DDD18B1728C0090268C /* Forcebit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Forcebit.png; sourceTree = "<group>"; };
@@ -236,6 +249,7 @@
 		FA911DE218B1773E0090268C /* bg2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg2@2x.png"; sourceTree = "<group>"; };
 		FA911DE318B1773E0090268C /* bg3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg3@2x.png"; sourceTree = "<group>"; };
 		FA911DE418B1773E0090268C /* bg4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg4@2x.png"; sourceTree = "<group>"; };
+		FAC9C89918B53CE300652A3B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +257,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC9C89A18B53CE300652A3B /* CoreData.framework in Frameworks */,
 				FA0CEEDC18ACEA46005A88E7 /* CoreGraphics.framework in Frameworks */,
 				FA0CEEDE18ACEA46005A88E7 /* UIKit.framework in Frameworks */,
 				FA0CEEDA18ACEA46005A88E7 /* Foundation.framework in Frameworks */,
@@ -265,6 +280,9 @@
 		FA0CEECD18ACEA46005A88E7 = {
 			isa = PBXGroup;
 			children = (
+				FA7F7A3F18B68DC30062B76A /* Person.h */,
+				FA7F7A4018B68DC30062B76A /* Person.m */,
+				FA5687FF18B620770032FA33 /* account.xcdatamodeld */,
 				FA1BCD6F18B3DF9500B7B7F3 /* CTCheckbox */,
 				FA6073F018B445330044F3A4 /* VPImageCropper */,
 				FA1BCD5D18B32FB300B7B7F3 /* MHTextField.m */,
@@ -303,6 +321,7 @@
 		FA0CEED818ACEA46005A88E7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAC9C89918B53CE300652A3B /* CoreData.framework */,
 				FA0CEED918ACEA46005A88E7 /* Foundation.framework */,
 				FA0CEEDB18ACEA46005A88E7 /* CoreGraphics.framework */,
 				FA0CEEDD18ACEA46005A88E7 /* UIKit.framework */,
@@ -333,6 +352,8 @@
 		FA0CEEE018ACEA46005A88E7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA7F7A4218B6B1330062B76A /* meal_tutorial_dimmer_gallery-568h@2x.png */,
+				FA7F7A3A18B674FD0062B76A /* 711.png */,
 				FA1BCD7618B42CBC00B7B7F3 /* defaultHeadSmall@2x.png */,
 				FA1BCD7418B42CB600B7B7F3 /* defaultHeadBig@2x.png */,
 				FA911DE118B1773E0090268C /* bg1@2x.png */,
@@ -443,6 +464,8 @@
 				FA0CEFC018AD66A8005A88E7 /* RMNavStepsViewController.m */,
 				FA0CEFC718AD6B7C005A88E7 /* LoginViewController.h */,
 				FA0CEFC818AD6B7C005A88E7 /* LoginViewController.m */,
+				FA56880B18B62BE20032FA33 /* GiftCardCell.h */,
+				FA56880C18B62BE20032FA33 /* GiftCardCell.m */,
 			);
 			path = Tutor;
 			sourceTree = "<group>";
@@ -648,6 +671,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Alex;
 				TargetAttributes = {
+					FA0CEED518ACEA46005A88E7 = {
+						DevelopmentTeam = 6A7K9VGHXX;
+					};
 					FA0CEEF618ACEA46005A88E7 = {
 						TestTargetID = FA0CEED518ACEA46005A88E7;
 					};
@@ -704,6 +730,8 @@
 				FA0CEF1418ACFC84005A88E7 /* Calendar Item@2x.png in Resources */,
 				FA911DE618B1773E0090268C /* bg2@2x.png in Resources */,
 				FA1BCD7718B42CBC00B7B7F3 /* defaultHeadSmall@2x.png in Resources */,
+				FA7F7A4318B6B1330062B76A /* meal_tutorial_dimmer_gallery-568h@2x.png in Resources */,
+				FA7F7A3B18B674FD0062B76A /* 711.png in Resources */,
 				FA0CEEED18ACEA46005A88E7 /* Main.storyboard in Resources */,
 				FA0CEF5318AD3C8C005A88E7 /* AbsTrainer.png in Resources */,
 				FA911DE518B1773E0090268C /* bg1@2x.png in Resources */,
@@ -753,6 +781,7 @@
 				FA0CEFC218AD66A8005A88E7 /* RMNavStepsViewController.m in Sources */,
 				FA0CF02818ADC639005A88E7 /* PNLineChartDataItem.m in Sources */,
 				FA0CEFCC18AD6CBD005A88E7 /* RMModalStepsController.m in Sources */,
+				FA56880D18B62BE20032FA33 /* GiftCardCell.m in Sources */,
 				FA1BCD5E18B32FB300B7B7F3 /* MHTextField.m in Sources */,
 				FA0CEF1E18AD0C31005A88E7 /* MainViewController.m in Sources */,
 				FA0CEFBD18AD658F005A88E7 /* RMStepsController.m in Sources */,
@@ -760,11 +789,13 @@
 				FA0CF03518ADC9AA005A88E7 /* DMBaseTransition.m in Sources */,
 				FA0CF02618ADC639005A88E7 /* PNLineChart.m in Sources */,
 				FA0CF02918ADC639005A88E7 /* UICountingLabel.m in Sources */,
+				FA56880118B620770032FA33 /* account.xcdatamodeld in Sources */,
 				FA6073F318B445330044F3A4 /* VPImageCropperViewController.m in Sources */,
 				FA0CEFF118ADA82C005A88E7 /* NSString+FontAwesome.m in Sources */,
 				FA0CF02418ADC639005A88E7 /* PNCircleChart.m in Sources */,
 				FA0CEFC918AD6B7C005A88E7 /* LoginViewController.m in Sources */,
 				FA0CF02218ADC639005A88E7 /* PNBarChart.m in Sources */,
+				FA7F7A4118B68DC30062B76A /* Person.m in Sources */,
 				FA0CEFBB18AD658F005A88E7 /* RMStep.m in Sources */,
 				FA0CEFEF18ADA82C005A88E7 /* UIView+AutoLayout.m in Sources */,
 				FA0CEF4A18AD391A005A88E7 /* InfoPageCell.m in Sources */,
@@ -896,10 +927,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: alex fu (6A7K9VGHXX)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Health/Health-Prefix.pch";
 				INFOPLIST_FILE = "Health/Health-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "141F1161-3D8F-4116-99CF-41AC687BD3D0";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -909,10 +942,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: alex fu (6A7K9VGHXX)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Health/Health-Prefix.pch";
 				INFOPLIST_FILE = "Health/Health-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "141F1161-3D8F-4116-99CF-41AC687BD3D0";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -990,6 +1025,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FA5687FF18B620770032FA33 /* account.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FA56880018B620770032FA33 /* account.xcdatamodel */,
+			);
+			currentVersion = FA56880018B620770032FA33 /* account.xcdatamodel */;
+			path = account.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FA0CEECE18ACEA46005A88E7 /* Project object */;
 }

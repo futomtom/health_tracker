@@ -10,6 +10,7 @@
 
 
 #import "DemoTextField.h"
+#import "Person.h"
 
 
 @interface SetupPage1VC : UIViewController <UITextFieldDelegate>
@@ -23,5 +24,6 @@
 @property (strong, nonatomic) IBOutlet DemoTextField *birthField;
 @property (strong, nonatomic) IBOutlet DemoTextField  *feetField;
 @property (strong, nonatomic) IBOutlet DemoTextField *weightFiled;
+@property (strong, nonatomic) Person *thenewUser;
 
 @end

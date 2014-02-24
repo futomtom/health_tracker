@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GRKPageViewController.h"
 #import "IntroPageVC.h"
+#import "Person.h"
 
 
 typedef enum {
@@ -30,8 +31,10 @@ typedef enum {
 //@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 //@property (nonatomic) NSFetchedResultsController *fetchedResultsController;
 
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *addBarButton;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *eventsBarButton;
+//@property (weak, nonatomic) IBOutlet UIBarButtonItem *addBarButton;
+//@property (weak, nonatomic) IBOutlet UIBarButtonItem *eventsBarButton;
+@property (weak, nonatomic) Person *currentUser;
+
 
 - (void)loadDate:(NSDate *)date;
 

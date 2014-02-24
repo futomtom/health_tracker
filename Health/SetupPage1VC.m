@@ -80,23 +80,24 @@
 
 #pragma mark - Actions
 - (IBAction)nextStepTapped:(id)sender {
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"autologin"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
+
     if (![self validateInputInView:self.view]){
+        
+        return;
+    }
+    
+    if ([_inchField.text intValue]>11)
+    {_inchField.backgroundColor = [UIColor colorWithRed:255 green:0 blue:0 alpha:0.5];
         return;
     }
     
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    
-    // saving an NSString
-    [prefs setObject:_NameTextField.text forKey:@"User"];
-/*
-    if ([_HeightField.text isEqualToString:@""])
-    { _HeightField.backgroundColor=[UIColor redColor];
-        return;
-    }
- */
+    [prefs setObject:_NameTextField.text forKey:@"name"];
+    [prefs setObject:_birthField.text forKey:@"birth"];
+    [prefs setInteger:[_feetField.text intValue] forKey:@"feet"];
+    [prefs setInteger:[_inchField.text intValue]forKey:@"inch"];
+    [prefs setInteger:[_weightFiled.text intValue] forKey:@"weight"];
+    [prefs synchronize];
     
        [self.stepsController showNextStep];
 }
@@ -106,7 +107,10 @@
     [self.stepsController showPreviousStep];
 }
 
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    [self.stepsController showPreviousStep];
+}
 
 
 @end
